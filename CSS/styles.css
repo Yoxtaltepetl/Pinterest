@@ -1,0 +1,1035 @@
+.navegador{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: grid;
+    grid-gap: 0;
+    width: 100%;
+    height: 50px;
+    grid-template-columns: 0.1fr 0.4fr 2fr 0.4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "c1 c2 c3 c4";
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: white;
+}
+
+.logo{
+    grid-area: c1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo-dimensiones{
+    height: 30px;
+}
+
+.menu{
+    grid-area: c2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-opciones{
+    border: none;
+    background: white;
+    font-size: 15px;
+    padding: 15px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.menu-opciones:hover{
+    cursor: pointer;
+}
+
+.menu-opciones:active{
+    background: black;
+    color: white;
+}
+
+.barra-buscadora{
+    grid-area: c3; 
+}
+
+#buscador{
+    border-radius: 0 40px 40px 0;
+    width: 95%;
+    height: 100%;
+    border-style: none;
+    background: #e9e8e8;
+}
+
+#area-buscador{
+    width: 100%;
+    height: 100%;
+}
+
+#buscador:focus{
+   outline: none;
+   border: 3px solid aqua;
+   border-radius: 40px;
+   transform: scale(1.04) translateX(-21px);
+}
+
+#buscador::placeholder{
+    position: absolute;
+    top: 25%;
+    font-size: 20px;
+}
+
+#lupa{
+    float: left;
+    border-radius: 40px 0 0 40px;
+    background: #e9e8e8;
+    width: 4%;
+    height: 100%;
+}
+
+#lupa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario{
+    position: relative;
+    grid-area: c4;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.usuario-opciones{
+    width: 45px;
+    height: 45px;
+    border-style: none;
+    border-radius: 50%;
+    background: none;
+}
+
+.usuario-opciones:hover{
+    cursor: pointer;
+    background: #e3e2e3;
+}
+
+.usuario-opciones:hover #notificaciones{
+    visibility: visible;
+}
+
+.usuario-opciones:hover #mensajes{
+    visibility: visible;
+}
+
+.usuario-opciones:hover #tu-perfil{
+    visibility: visible;
+}
+
+.usuario-opciones:hover #desplegar{
+    visibility: visible;
+}
+
+.dimensiones-usuario{
+    width: 70%;
+    height: 60%;
+}
+
+#notificaciones{
+    position: absolute;
+    left: -15px;
+    bottom: -30px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+#mensajes{
+    position: absolute;
+    left: 50px;
+    bottom: -30px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+#tu-perfil{
+    position: absolute;
+    left: 105px;
+    bottom: -30px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+#desplegar{
+    position: absolute;
+    left: 150px;
+    bottom: -30px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+
+
+.contenedor{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "c1 c2 c3 c4 c5";
+}
+
+.columna1{
+    grid-area: c1;
+}
+
+.columna2{
+    grid-area: c2;
+}
+
+.columna3{
+    grid-area: c3;
+}
+
+.columna4{
+    grid-area: c4;
+}
+
+.columna5{
+    grid-area: c5;
+}
+
+.columna1 #imagen1{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/22.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen1:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/22.jpg);
+}
+
+#imagen1:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen2{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/18.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen2:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/18.jpg);
+}
+
+#imagen2:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen3{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria5/13.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen3:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria5/13.jpg);
+}
+
+#imagen3:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen4{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/3.png);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen4:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/3.png);
+}
+
+#imagen4:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen5{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/29.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen5:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/29.jpg);
+}
+
+#imagen5:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen6{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/31.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen6:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/31.jpg);
+}
+
+#imagen6:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen7{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/35.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen7:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/35.jpg);
+}
+
+#imagen7:hover .contenedorbotones{
+    visibility: visible;
+}
+
+.columna1 #imagen8{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/40.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna1 #imagen8:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/40.jpg);
+}
+
+#imagen8:hover .contenedorbotones{
+    visibility: visible;
+}
+/*---------------------------------------------------*/
+.columna2 #imagen1{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/11.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen1:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/11.jpg);
+}
+
+.columna2 #imagen2{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria5/1.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen2:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria5/1.jpg);
+}
+
+.columna2 #imagen3{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/10.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen3:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/10.jpg);
+}
+
+.columna2 #imagen4{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/21.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen4:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/21.jpg);
+}
+
+.columna2 #imagen5{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/20.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen5:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/20.jpg);
+}
+
+.columna2 #imagen6{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria5/26.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen6:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria5/26.jpg);
+}
+
+.columna2 #imagen7{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/6.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen7:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/6.jpg);
+}
+
+.columna2 #imagen8{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria5/41.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen8:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria5/41.jpg);
+}
+
+.columna2 #imagen9{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/38.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna2 #imagen9:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/38.jpg);
+}
+
+#imagen9:hover .contenedorbotones{
+    visibility: visible;
+}
+
+/*--------------------------------------------------------------*/
+
+.columna3 #imagen1{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/15.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen1:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/15.jpg);
+}
+
+.columna3 #imagen2{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/24.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen2:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/24.jpg);
+}
+
+.columna3 #imagen3{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/28.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen3:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/28.jpg);
+}
+
+.columna3 #imagen4{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/17.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen4:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/17.jpg);
+}
+
+.columna3 #imagen5{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/5.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen5:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/5.jpg);
+}
+
+.columna3 #imagen6{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/33.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen6:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/33.jpg);
+}
+
+.columna3 #imagen7{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/35.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen7:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/35.jpg);
+}
+
+.columna3 #imagen8{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/39.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna3 #imagen8:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/39.jpg);
+}
+
+/*----------------------------------------------------------------*/
+.columna4 #imagen1{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/12.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen1:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/12.jpg);
+}
+
+.columna4 #imagen2{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/14.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen2:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/14.jpg);
+}
+
+.columna4 #imagen3{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria5/25.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen3:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria5/25.jpg);
+}
+
+.columna4 #imagen4{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/19.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen4:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/19.jpg);
+}
+
+.columna4 #imagen5{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/27.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen5:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/27.jpg);
+}
+
+.columna4 #imagen6{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/34.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen6:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/34.jpg);
+}
+
+.columna4 #imagen7{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria4/8.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen7:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria4/8.jpg);
+}
+
+.columna4 #imagen8{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/7.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen8:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/7.jpg);
+}
+
+.columna4 #imagen9{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/9.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna4 #imagen9:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/9.jpg);
+}
+/*----------------------------------------------------------*/
+.columna5 #imagen1{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/23.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen1:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/23.jpg);
+}
+
+.columna5 #imagen2{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/16.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen2:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/16.jpg);
+}
+
+.columna5 #imagen3{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/32.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen3:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/32.jpg);
+}
+
+.columna5 #imagen4{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/2.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen4:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/2.jpg);
+}
+
+.columna5 #imagen5{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria2/4.png);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen5:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria2/4.png);
+}
+
+.columna5 #imagen6{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/30.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen6:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/30.jpg);
+}
+
+.columna5 #imagen7{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria1/37.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen7:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria1/37.jpg);
+}
+
+.columna5 #imagen8{
+    width: 100%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/categoria3/36.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.columna5 #imagen8:hover{
+    cursor: zoom-in;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/categoria3/36.jpg);
+}
+
+
+.contenedorbotones{
+    visibility: hidden;
+}
+
+#boton-guardar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border-style: none;
+    border-radius: 30px;
+    font-size: 17px;
+    padding: 15px 20px;
+}
+
+#boton-guardar:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.upload{
+    position: absolute;
+    bottom: 15px;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius: 50%;
+    background: #e3e2e3;
+    opacity: 70%;
+}
+
+.upload:hover{
+    cursor: pointer;
+}
+
+#upload{
+    width: 60%;
+    height: 60%;
+}
+
+.more-option{
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius: 50%;
+    background: #e3e2e3;
+    opacity: 70%;
+}
+
+.more-option:hover{
+    cursor: pointer;
+}
+#more-option{
+    width: 70%;
+    height: 70%;
+}
+
+.mi-GitHub{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background: #e3e2e3;
+    opacity: 70%;
+    border-style: none;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#boton-ayuda{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+}
+
+#boton-ayuda:hover{
+    cursor: pointer;
+}
+
+#simbolo-ayuda{
+    display: flex;
+    align-self: center;
+}
+
